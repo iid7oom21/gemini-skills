@@ -1,24 +1,5 @@
 # This workflow will upload a Python Package to PyPI when a release is created
-# For more informatioimport os
-from google import genai
-
-print("جاري الإرسال...")
-
-client = genai.Client(
-    api_key="AQ.Ab8RN6LflBc2a2fcw1pHA5Ibp1a6ef3IopxPeNSA0RrnQzpqEQ",
-)
-
-try:
-    response = client.models.generate_content(
-        model='models/gemini-2.5-flash',
-        contents="مرحباً، اعطني ملخصاً سريعاً جداً عن الذكاء الاصطناعي",
-    )
-    print("النتيجة:")
-    print(response.text)
-except Exception as e:
-    print("حدث خطأ:", e)
-
-print("\n--- انتهى ---")n see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
